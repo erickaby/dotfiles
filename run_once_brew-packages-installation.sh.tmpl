@@ -1,0 +1,16 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+# Install brave browser
+# command -v chezmoi >/dev/null 2>&1 || \
+#   (echo '👊  Installing brave' && brew install --cask brave-browser)
+
+# if ! brew info brave-browser &>/dev/null; then
+#     : (echo '👊  Installing brave' && brew install --cask brave-browser)
+# fi
+
+{{ end -}}
+
+echo "Done. Installing packages"
