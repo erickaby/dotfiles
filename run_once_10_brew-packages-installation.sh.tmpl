@@ -1,16 +1,43 @@
-{{ if eq .chezmoi.os "darwin" -}}
+{{- if (eq .chezmoi.os "darwin") -}}
 #!/bin/bash
 
 set -eufo pipefail
 
-# Install brave browser
-# command -v chezmoi >/dev/null 2>&1 || \
-#   (echo '👊  Installing brave' && brew install --cask brave-browser)
+formulae=(
+	autojump
+	bat
+	curl
+	deno
+	fzf
+	git
+	git-delta
+	git-gui
+	jq
+	less
+	nano
+	nvm
+	tealdeer
+	wget
+	yarn
+	zplug
+    docker
+    go
+)
+casks=(
+	aerial
+	clipy
+	google-chrome
+	kap
+	iterm2
+	visual-studio-code
+    postman
+	slack
+)
 
-# if ! brew info brave-browser &>/dev/null; then
-#     : (echo '👊  Installing brave' && brew install --cask brave-browser)
-# fi
+brew update
 
-{{ end -}}
+brew install ${formulae[@]}
+brew install --cask ${casks[@]}
 
-echo "Done. Installing packages"
+brew cleanup
+{{ end }}
