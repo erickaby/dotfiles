@@ -16,3 +16,9 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
+[".themes/iterm2/dracula"]
+    type = "archive"
+    url = "https://github.com/dracula/iterm/archive/master.zip"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
