@@ -15,9 +15,22 @@ plugins=(
   kubectl
   history
   npm
+  encode64
+  aws
+  docker
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  golang
 )
 source $ZSH/oh-my-zsh.sh
 
 DISABLE_AUTO_UPDATE="true"
+
+alias src="source ~/.zshrc"
+
+alias cz="chezmoi"
+
+alias kx="kubectx"
+alias kn="kubens"
 
 eval "$(starship init zsh)"
