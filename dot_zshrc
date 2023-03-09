@@ -26,11 +26,20 @@ source $ZSH/oh-my-zsh.sh
 
 DISABLE_AUTO_UPDATE="true"
 
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 alias src="source ~/.zshrc"
 
 alias cz="chezmoi"
 
 alias kx="kubectx"
 alias kn="kubens"
+
+# Setup GOLANG brew
+export GOPATH=$HOME/golang
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 
 eval "$(starship init zsh)"
