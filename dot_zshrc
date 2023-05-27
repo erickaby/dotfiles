@@ -42,4 +42,7 @@ export GOROOT=/opt/homebrew/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
+# Hide '%' https://zsh.sourceforge.io/Doc/Release/Options.html#Prompting 
+export PROMPT_EOL_MARK=''
+
 eval "$(starship init zsh)"

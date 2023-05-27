@@ -29,6 +29,18 @@ formulae=(
 	helm
 	ansible
 	golang-migrate
+	nats-io/nats-tools/nats
+	istioctl
+	telnet
+	k3d
+	tilt-dev/tap/tilt
+	ory/tap/cli
+	ory/tap/keto
+	ory/tap/oathkeeper
+	ory/tap/hydra
+	ory/tap/kratos
+	handbrake
+	stern
 )
 casks=(
 	aerial
@@ -58,9 +70,11 @@ casks=(
 	font-fira-code-nerd-font
 	beekeeper-studio
 	cyberduck
+	handbrake
 )
 
 brew tap -q homebrew/cask-fonts
+brew tap nats-io/nats-tools
 
 brew update
 
