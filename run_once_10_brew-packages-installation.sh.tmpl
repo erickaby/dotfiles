@@ -34,13 +34,20 @@ formulae=(
 	telnet
 	k3d
 	tilt-dev/tap/tilt
+	handbrake
+	stern
+	starship
+	
+{{- if eq .location "personal" }}
 	ory/tap/cli
 	ory/tap/keto
 	ory/tap/oathkeeper
 	ory/tap/hydra
 	ory/tap/kratos
-	handbrake
-	stern
+{{- end }}
+
+{{- if eq .location "work" }}
+{{- end }}
 )
 casks=(
 	aerial
@@ -51,26 +58,32 @@ casks=(
 	visual-studio-code
     postman
 	slack
-    discord
-    lens
+	lens
     spotify
     figma
-    clickup
-    readdle-spark
     numi
     tiles
-    bitwarden
     authy
 	obsidian
-	autodesk-fusion360
-	blender
 	istat-menus
-	superslicer
-	balenaetcher
 	font-fira-code-nerd-font
 	beekeeper-studio
 	cyberduck
 	handbrake
+
+{{- if eq .location "personal" }}
+	discord
+	clickup
+	readdle-spark
+    bitwarden
+	autodesk-fusion360
+	blender
+	superslicer
+	balenaetcher
+{{- end }}
+
+{{- if eq .location "work" }}
+{{- end }}
 )
 
 brew tap -q homebrew/cask-fonts
