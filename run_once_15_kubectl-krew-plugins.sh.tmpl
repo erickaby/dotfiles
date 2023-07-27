@@ -1,0 +1,12 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+# https://github.com/nilic/kubectl-netshoot
+# add kubectl-netshoot plugin index 
+kubectl krew index add netshoot https://github.com/nilic/kubectl-netshoot.git
+# install netshoot plugin
+kubectl krew install netshoot/netshoot
+
+{{ end }}

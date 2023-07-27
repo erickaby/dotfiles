@@ -33,8 +33,21 @@ alias src="source ~/.zshrc"
 
 alias cz="chezmoi"
 
-alias kx="kubectx"
+INSTALLATION_PATH=$(brew --prefix switch) && source $INSTALLATION_PATH/switch.sh
+
+alias kx="switch --kubeconfig-path ~/.kube/sine-cluster-configs"
 alias kn="kubens"
+
+# K8s Debugging
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# alias kd-setup=""
+# alias kd-run="kubectl run netshoot --image=nicolaka/netshoot -l sidecar.istio.io/inject="true" --rm -i --tty -- /bin/zsh"
+alias kd="kubectl netshoot run tmp-shell"
+alias kdi="kubectl netshoot run tmp-istio-shell -l sidecar.istio.io/inject='true'"
+
+# Libpq setup
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # Setup GOLANG brew
 export GOPATH=$HOME/golang

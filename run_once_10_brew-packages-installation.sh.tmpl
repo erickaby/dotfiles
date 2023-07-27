@@ -4,40 +4,53 @@
 set -eufo pipefail
 
 formulae=(
+	watch
+	ansible
 	autojump
+	awscli
 	bat
+	cockroachdb/tap/cockroach
 	curl
 	deno
 	fzf
+	gh
 	git
 	git-delta
 	git-gui
+	golang-migrate
+	golangci-lint
+	handbrake
+	helm
+	istioctl
 	jq
+	k3d
+	kubectx
 	less
 	nano
+	nats-io/nats-tools/nats
 	nvm
+	starship
+	stern
 	tealdeer
+	telnet
+	tilt-dev/tap/tilt
 	wget
 	yarn
 	zplug
     docker
     go
-	golangci-lint
-	kubectx
-	gh
-	cockroachdb/tap/cockroach
-	helm
-	ansible
-	golang-migrate
-	nats-io/nats-tools/nats
-	istioctl
-	telnet
-	k3d
-	tilt-dev/tap/tilt
-	handbrake
-	stern
-	starship
-	
+	libpq
+	terragrunt
+	terraform
+	k9s
+	python
+	node
+	danielfoehrkn/switch/switch
+	krew
+	argocd
+	cmctl
+	terraform-docs
+
 {{- if eq .location "personal" }}
 	ory/tap/cli
 	ory/tap/keto
@@ -70,6 +83,8 @@ casks=(
 	beekeeper-studio
 	cyberduck
 	handbrake
+	brave-browser
+	logi-options-plus
 
 {{- if eq .location "personal" }}
 	discord
@@ -83,6 +98,8 @@ casks=(
 {{- end }}
 
 {{- if eq .location "work" }}
+	leapp
+	session-manager-plugin
 {{- end }}
 )
 
