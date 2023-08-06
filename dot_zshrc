@@ -59,4 +59,4 @@ export PATH=$PATH:$GOROOT/bin
 export PROMPT_EOL_MARK=''
 
 export STARSHIP_LOG=error
-starship init zsh
+eval "$(starship init zsh)"
