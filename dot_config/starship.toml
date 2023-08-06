@@ -1,9 +1,8 @@
+
+
 [git_branch]
 style = "bg:#FFF"
 
 [kubernetes]
-format = '[$context](bold blue) | '
+format = '[$symbol$context]($style) in '
 disabled = false
-
-[kubernetes.context_aliases]
-'arn:aws:eks:ap-southeast-2:625704270967:cluster/(?P<var_cluster>[\w-]+)' = '[625] $var_cluster'

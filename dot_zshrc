@@ -58,4 +58,5 @@ export PATH=$PATH:$GOROOT/bin
 # Hide '%' https://zsh.sourceforge.io/Doc/Release/Options.html#Prompting 
 export PROMPT_EOL_MARK=''
 
-eval "$(starship init zsh)"
+export STARSHIP_LOG=error
+starship init zsh
